@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FK Brothers Zerox & Stationery</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="FK Brothers Zerox & Stationery – Best printing, xerox, lamination & stationery in Rajkot." />
+  <meta property="og:title" content="FK Brothers Zerox & Stationery" />
+  <meta property="og:description" content="Your one-stop shop for all document and printing needs." />
+  <meta property="og:image" content="shop.png.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Animate on Scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: url('shop.png.jpg') center/cover no-repeat;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    header h1, header p, .hero-cta {
+      z-index: 2;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: bounceIn 1s ease-out forwards;
+    }
+    header p {
+      font-size: 1.2rem;
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
+    .hero-cta {
+      margin-top: 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #2a9d8f;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+    nav.scrolled {
+      background-color: rgba(42, 157, 143, 0.9);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      font-size: 1rem;
+      position: relative;
+    }
+    nav a:hover {
+      color: #e9c46a;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #e9c46a;
+      transition: width 0.3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    #menu-toggle {
+      display: none;
+      color: white;
+      font-size: 24px;
+      position: absolute;
+      right: 20px;
+      top: 14px;
+      cursor: pointer;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #1d3557;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      padding-left: 5px;
+    }
+    ul li:hover {
+      transform: translateX(10px);
+      background-color: rgba(42, 157, 143, 0.1);
+      border-left: 3px solid #2a9d8f;
+    }
+    .contact-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #1d3557;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease-in-out;
+    }
+    .contact-btn:hover {
+      background-color: #457b9d;
+      transform: scale(1.08);
+    }
+    .offer-banner {
+      background-color: #e63946;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+    blockquote {
+      background: #e0f7f5;
+      border-left: 5px solid #2a9d8f;
+      padding: 20px;
+      margin: 20px 0;
+      font-style: italic;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #1d3557;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounceIn {
+      0% { opacity: 0; transform: scale(0.3); }
+      50% { transform: scale(1.05); }
+      70% { transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        display: none;
+        padding: 10px 0;
+      }
+      nav.open a {
+        display: block;
+      }
+      #menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>FK Brothers Zerox & Stationery</h1>
+    <p>Fast, Affordable & Quality Printing and Stationery Services</p>
+    <a href="#contact" class="contact-btn hero-cta">Get in Touch</a>
+  </header>
+
+  <!-- Navigation -->
+  <div id="menu-toggle" class="fas fa-bars"></div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="services.html">Services</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Offer -->
+  <div class="offer-banner">🎉 All Stationery Items Available Now! 🎉</div>
+
+  <!-- About -->
+  <section id="about" data-aos="fade-up">
+    <h2>About Us</h2>
+    <p>FK Brothers is a trusted name in town, offering high-quality photocopy, printing, lamination, and stationery supplies. We serve students, professionals, and businesses with affordable and efficient solutions.</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" data-aos="fade-up">
+    <h2>What Our Customers Say</h2>
+    <blockquote>
+      “Excellent service and quick response. Got my documents printed in minutes!”
+      <footer>– Ramesh Patel</footer>
+    </blockquote>
+    <blockquote>
+      “The best shop in Rajkot for all office work. Very helpful team!”
+      <footer>– Sneha Joshi</footer>
+    </blockquote>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> Jumma Masjid Chowk, Soni Bazar, Rajkot 360001, Gujarat</p>
+    <p><strong>Phone:</strong> +91-8347489898</p>
+    <p><strong>Email:</strong> fkxerox21@gmail.com</p>
+
+    <!-- Google Map -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15103.711789047308!2d70.78793361835307!3d22.29665836206391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04a9f5d8f5b7b%3A0x37cf56d04d57d698!2sJumma%20Masjid%20Chowk%2C%20Soni%20Bazar%2C%20Rajkot%2C%20Gujarat%20360001%2C%20India!5e0!3m2!1sen!2sus!4v1634071694772!5m2!1sen!2sus"
+        width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+
+    <!-- ✅ Email Contact Form -->
+    <form action=https://formsubmit.co/your@email.com>
+      <input type="text" name="name" placeholder="Your Name" required style="padding:10px;width:100%;margin-bottom:10px;">
+      <input type="email" name="email" placeholder="Your Email" required style="padding:10px;width:100%;margin-bottom:10px;">
+      <textarea name="message" rows="4" placeholder="Your Message" required style="padding:10px;width:100%;margin-bottom:10px;"></textarea>
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="<form action="https://formsubmit.co/your@email.com" method="POST"/>
+
+      <button type="submit" class="contact-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+    </form>
+
+    <div style="margin-top: 30px;">
+      <a href="mailto:fkxerox21@gmail.com?subject=Upload%20Image%20Inquiry&body=Dear%20FK%20Brothers,%0A%0AI%20would%20like%20to%20check%20if%20you%20have%20the%20following%20item.%0A%0A%5BPlease%20attach%20your%20image%20here%5D" class="contact-btn">
+        <i class="fas fa-upload"></i> Upload Image via Email
+      </a>
+    </div>
+  </section>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/918347489898" class="whatsapp-button" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 FK Brothers Zerox & Stationery. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    window.addEventListener("scroll", function() {
+      let nav = document.querySelector("nav");
+      nav.classList.toggle("scrolled", window.scrollY > 50);
+    });
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+      document.querySelector("nav").classList.toggle("open");
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1200 });</script>
+</body>
+</html>
